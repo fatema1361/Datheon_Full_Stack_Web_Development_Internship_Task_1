@@ -51,14 +51,9 @@ fatema-portfolio/
 
 - GitHub: https://github.com/fatema1361
 - LinkedIn: https://www.linkedin.com/in/fa-te-ma-644818362
-- Live Portfolio: ADD_YOUR_PUBLISHED_URL_HERE
+- Live Portfolio:
 
-## Future Improvements
-
-- Add screenshots and live demos of my projects
-- Improve accessibility and performance
-- Continue improving the portfolio as I learn new skills
 
 ---
 
-Built by Fatema Begum.
+Built by Fatema .

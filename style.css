@@ -1,1 +1,249 @@
+/* whole */
+:root{
+    color-scheme:dark;
+    --bg:#080d24;
+    --surface:#101936;
+    --text:#f5f7ff;
+    --muted:#b5bfdc;
+    --border:#28365f;
+    --accent:#9a7bff;
+    --accent-strong:#7352ff;
+    --header-bg:#0b1230;
+
+}
+body.light-mode{
+    color-scheme: light;
+    --bg:#f5f7ff;
+    --surface:#ffffff;
+    --surface-hover:#edf0ff;
+    --text:#17203a;
+    --muted:#58627b;
+    --border:#dce2f2;
+    --accent:#6844dc;
+    --accent-strong:#5532cc;
+    --header-bg:#ffffff;
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body{
+    font-family:Arial,sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background 0.3s,color 0.3s;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+button{
+    font:inherit;
+}
+ul{
+    list-style: none;
+}
+section{
+    padding:85px 8%;
+}
+
+/* navbar */
+header{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+} 
+.navbar{
+    max-width:1400px;
+    min-height:76px;
+    margin: auto;
+    padding: 12px 8%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 25px;
+}
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    color:var(--text);
+}  
+.logo span{
+    color: var(--accent);
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.nav-links a{
+    color: var(--muted);
+    transition: color 0.2s;
+}
+.nav-links a:hover{
+    color: var(--accent);
+}
+.nav-actions{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-actions button{
+    width:42px;
+    height:42px;
+    color: var(--text);
+    background: var(--surface);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.nav-actions button:hover{
+    border-color: var(--accent);
+}
+#menu-toggle{
+    display: none;
+}
+.more-menu{
+    position: relative;
+}
+#more-options{
+    position:absolute;
+    top: 50px;
+    right: 0;
+    width: 165px;
+    padding: 8px;
+    background: var(--border);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px #00000030;
+}
+#more-options[hidden]{
+    display: none;
+
+}
+#more-options a{
+    display: block;
+    padding: 10px;
+    border-radius: 7px;
+
+}
+#more-options a:hover{
+    background:var(--surface-hover);
+    color:var(--accent) ;
+}
+/* hero */
+.hero{
+    min-height:570px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: radial-gradient(
+        circle at 85% 35%,
+        #30246a55,
+        transparent 35%
+    );
+}
+.hero-content{
+    flex:1;
+    max-width: 750px;
+}
+.intro,
+.section-label{
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight:bold;
+    letter-spacing: 2px;
+}
+.hero h1{
+    font-size: clamp(2.3rem,5vw,4rem);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+.hero h1 span{
+    display: block;
+    color: var(--accent);
+}
+.description,
+.section-description{
+    color: var(--muted);
+    max-width: 680px;
+    margin-bottom: 25px;
+}
+.hero-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid var(--accent-strong);
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+.btn:hover{
+    transition: translateY(-3px);
+}
+.primary-btn{
+    background: var(--accent-strong);
+    color: #ffffff;
+}
+.primary-btn:hover{
+    background: var(--accent);
+}
+.secondary-btn{
+    color:var(--text);
+}
+.secondary-btn:hover{
+    background: var(--surface-hover);
+}
+.social-links,
+.contact-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.social-links a,
+.contact-links a{
+    color: var(--muted);
+}
+.social-links a:hover,
+.contact-links a:hover{
+    color: var(--accent);
+}
+.hero-image{
+    flex: 0 0 250px;
+    text-align: center;
+}
+.profile-circle{
+    width: 230px;
+    height: 230px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background: linear-gradient(135deg,#322568,#172f67);
+    box-shadow: 0 0 50px #7958ff30;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight:bold;
+}
+.hero-image p{
+    margin-top:15px;
+    color: var(--muted);
+}
+/* heading section */
+
 
