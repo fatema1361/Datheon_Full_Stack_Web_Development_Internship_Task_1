@@ -1,6 +1,6 @@
 const themeButton=document.getElementById("theme-toggle");
 const menuButton=document.getElementById("menu-toggle");
-const navLinks=document.getElementById("nav-toggle");
+const navLinks=document.getElementById("nav-links");
 const moreButton=document.getElementById("more-toggle");
 const moreOptions=document.getElementById("more-options");
 
@@ -52,10 +52,10 @@ navigationLinks.forEach(function(link){
    });
 });
 // three dot
-moreButton.addEventListener("click",function(){
-    const isHidden=moreOptions.hidden;
-    moreOptions.hidden=!isHidden;
-    moreButton.setAttribute("aria-expanded",isHidden);
+moreButton.addEventListener("click",function(event){
+    event.stopPropagation();
+    moreOptions.hidden=!moreOptions.hidden;
+    moreButton.setAttribute("aria-expanded",String(!moreOptions.hidden));
 });
 const moreLinks=moreOptions.querySelectorAll("a");
 
@@ -67,10 +67,7 @@ moreLinks.forEach(function(link){
 });
 
 document.addEventListener("click",function(event){
-    if(
-        !event.target.closest(".more-menu")&&
-        !moreOptions.hidden
-    ){
+    if( !event.target.closest(".more-menu")){
         moreOptions.hidden=true;
         moreButton.setAttribute("aria-expanded","false");
     }
